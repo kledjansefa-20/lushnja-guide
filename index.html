@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lushnja Guide – Zbulo Lushnjën</title>
+<meta name="description" content="Udhëzues dixhital i qytetit të Lushnjës: restorante, kafene, hotele, farmaci, marketet, atraksione dhe institucione.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#2f5d3a;--g2:#4a7c54;--bg:#f6f2e8;--card:#fff;--tx:#232623;--mu:#686c66;--ln:#e3dcc8;--sh:rgba(35,38,35,.1);--warn:#7a5a10;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181c18;--card:#242924;--tx:#eeeadc;--mu:#a3a899;--ln:#383f38;--g:#8fc79a;--g2:#6ea87a;--sh:rgba(0,0,0,.4);--warn:#e7c46a}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.45;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header{background:var(--bg);position:sticky;top:0;z-index:5;border-bottom:1px solid var(--ln);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:8px;font:700 20px 'Fraunces',serif;color:var(--g);text-decoration:none}
+.lang,.chip{border:1px solid var(--ln);background:var(--card);color:var(--tx);border-radius:20px;padding:7px 13px;font:700 13px 'Nunito Sans',sans-serif;cursor:pointer}
+button:focus-visible,input:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+.hero{border-radius:24px;padding:28px 20px;color:#fff;background:linear-gradient(155deg,#2f5d3a,#5b8a55 60%,#c8b27a);margin:16px 0}
+.hero h1{font-size:clamp(26px,6vw,40px)}.hero p{margin-top:8px;opacity:.93;max-width:560px}
+.search{position:relative;margin-top:16px}
+.search input{width:100%;padding:14px 16px;border-radius:16px;border:0;font:inherit;background:#fff;color:#232623}
+h2{font-size:22px;margin:28px 0 12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.cat{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:14px 8px;text-align:center;cursor:pointer;font:700 13px 'Nunito Sans',sans-serif;color:var(--tx)}
+.cat i{display:block;font-style:normal;font-size:30px;margin-bottom:6px}
+.cat.on{background:var(--g);color:#fff;border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 2px 10px var(--sh);cursor:pointer;display:flex;flex-direction:column}
+.cov{height:96px;display:flex;align-items:center;justify-content:center;font-size:38px;color:#fff;background-size:cover;background-position:center}
+.cb{padding:12px 14px 14px}.cb h3{font-size:17px}.cb p{font-size:13.5px;color:var(--mu);margin-top:4px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:var(--g);margin-bottom:4px}
+.chk{display:inline-block;font-size:10.5px;font-weight:700;background:#faeccc;color:#7a5a10;border-radius:8px;padding:1px 6px;margin-left:4px}
+.mapwrap{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 2px 10px var(--sh)}
+.mapwrap iframe{display:block;width:100%;height:340px;border:0}
+.mapfb{padding:22px;text-align:center}
+.btn{display:inline-block;border:0;background:var(--g);color:#fff;border-radius:14px;padding:12px 18px;font:700 15px 'Nunito Sans',sans-serif;cursor:pointer;text-decoration:none;margin:6px 6px 0 0}
+.btn.alt{background:var(--card);color:var(--g);border:1px solid var(--g)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;border-bottom:1px solid var(--ln)}
+.empty{text-align:center;color:var(--mu);padding:28px}
+.note{font-size:12.5px;color:var(--mu);margin:14px 0}
+footer{border-top:1px solid var(--ln);margin-top:36px;padding:18px 0 28px;font-size:13px;color:var(--mu)}
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center;z-index:20}
+.sheet>div{background:var(--bg);width:100%;max-width:560px;max-height:92%;overflow-y:auto;border-radius:24px 24px 0 0;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+@media(min-width:700px){.sheet{align-items:center}.sheet>div{border-radius:24px}}
+.sheet .cov{height:150px;font-size:56px}.in{padding:16px}
+.kv{font-size:14.5px;margin:7px 0}.kv span{color:var(--mu)}
+</style>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="#" aria-label="Lushnja Guide"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C9.4 2 4.5 7 4.5 13.2 4.5 21 16 30 16 30s11.500-9 11.500-16.800C27.500 7 22.600 2 16 2z" fill="#2f5d3a"/><path d="M16 8c-3.500 1-5 4-4 7 3 0 6-1.500 6-4.500 1 3-.500 5.500-2.500 6.500" fill="none" stroke="#f6f2e8" stroke-width="1.800" stroke-linecap="round"/></svg>Lushnja Guide</a><button class="lang" id="lg" onclick="setLang()">SQ · EN</button></div></header>
+<main class="wrap" id="main"></main>
+<footer><div class="wrap" id="foot"></div></footer>
+<div id="ov"></div>
+<script>
+var EMBED=true;
+var lang=(function(){try{return localStorage.getItem('lg')||'sq'}catch(e){return 'sq'}})();
+var S={q:'',cat:'all',mapq:'Lushnje, Albania'};
+function T(a,b){return lang=='sq'?a:b}
+function $(s){return document.querySelector(s)}
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+var CATS=[['restaurants','🍽️','Restorante','Restaurants','restorante në Lushnjë'],['cafes','☕','Kafene & Bare','Cafes & Bars','kafene në Lushnjë'],['hotels','🛏️','Hotele & Akomodim','Hotels & Accommodation','hotele Lushnjë'],['pharmacies','💊','Farmaci','Pharmacies','farmaci Lushnjë'],['supermarkets','🛒','Supermarkete','Supermarkets','supermarket Lushnjë'],['shops','🛍️','Dyqane & Pazar','Shops & Shopping','pazari Lushnjë'],['attractions','🏛️','Atraksione','Tourist Attractions','atraksione turistike Lushnjë'],['institutions','🏢','Institucione publike','Public Institutions','institucione publike Lushnjë']];
+function cn(k){var c=CATS.filter(function(x){return x[0]==k})[0];return T(c[2],c[3])}
+function ce(k){return CATS.filter(function(x){return x[0]==k})[0][1]}
+var CL={restaurants:'#a4583b',cafes:'#8a6a4a',hotels:'#6b5a8a',pharmacies:'#3f8a6a',supermarkets:'#4a7ab0',shops:'#b8743a',attractions:'#3f7f7a',institutions:'#5a6a7a'};
+/* STATIC DATA. s = source. chk:1 = lower-confidence source, verify before relying on it. img = optional photo path. */
+var P=[
+{id:'r1',c:'restaurants',n:'Bar Restorant Flamuri',a:'Lagjia Clirimi, Rruga Sako Hajdari',d:['Steakhouse dhe barbecue.','Steakhouse and barbecue.'],s:'Tripadvisor',f:1},
+{id:'r2',c:'restaurants',n:'Buon Gusto',a:'Bulevardi i Palmave',d:['Kuzhinë italiane dhe mesdhetare, me pizza.','Italian and Mediterranean cuisine, with pizza.'],s:'Tripadvisor',f:1},
+{id:'r3',c:'restaurants',n:'Vila Bardhë',a:'Lushnjë',d:['Kuzhinë italiane, greke dhe shqiptare, me peshk.','Italian, Greek and Albanian cuisine, with seafood.'],s:'Tripadvisor',f:1},
+{id:'r4',c:'restaurants',n:'La Bontá Ristorante Pizzeria',a:'Lushnjë',d:['Pizzeri dhe kuzhinë italiane.','Pizzeria and Italian cuisine.'],s:'Tripadvisor'},
+{id:'r5',c:'restaurants',n:'Restorant Peshku',a:'Çermë, Lushnjë',d:['Specialitete peshku dhe skarë. Mirë të rezervosh përpara.','Seafood and barbecue. Booking ahead is advisable.'],s:'Tripadvisor'},
+{id:'r6',c:'restaurants',n:'House of Fish Joni',a:'Lushnjë',d:['Peshk dhe kuzhinë shqiptare e italiane.','Fish and Albanian and Italian cuisine.'],s:'Tripadvisor'},
+{id:'r7',c:'restaurants',n:'Grill House',a:'Lushnjë',d:['Skarë dhe steakhouse.','Barbecue and steakhouse.'],s:'Tripadvisor'},
+{id:'r8',c:'restaurants',n:'Shija e Nënës',a:'Rruga Misto Mame',d:['Kuzhinë shqiptare dhe evropiane.','Albanian and European cuisine.'],s:'Tripadvisor'},
+{id:'r9',c:'restaurants',n:'Restorant Kongresi',a:'Lushnjë',d:['Restorant i listuar pranë sheshit të Kongresit.','Restaurant listed near the Congress square.'],s:'Tripadvisor',chk:1},
+{id:'r10',c:'restaurants',n:'Lubel Restaurant',a:'Lushnjë',d:['Kuzhinë italiane dhe pizza.','Italian cuisine and pizza.'],s:'Tripadvisor'},
+{id:'r11',c:'restaurants',n:'Restorant Portokallet',a:'Lushnjë',d:['Restorant i listuar në Lushnjë.','Restaurant listed in Lushnjë.'],s:'Tripadvisor',chk:1},
+{id:'r12',c:'restaurants',n:'Restorant Tradita',a:'Lushnjë',d:['Kuzhinë shqiptare dhe evropiane, me shërbim dërgese.','Albanian and European cuisine, with delivery.'],s:'Tripadvisor',chk:1},
+{id:'k1',c:'cafes',n:'Pedonale Bar',a:'Lushnjë',d:['Bar me mëngjes dhe kuzhinë italiane e franceze.','Bar with breakfast and Italian and French cuisine.'],s:'Tripadvisor'},
+{id:'k2',c:'cafes',n:'Speranza Bar',a:'Lushnjë',d:['Bar i listuar në Lushnjë.','Bar listed in Lushnjë.'],s:'Tripadvisor',chk:1},
+{id:'h1',c:'hotels',n:'Rio Hotel Bar Restaurant',a:'Autostrada Lushnjë–Fier, KM 2',d:['Hotel me bar dhe restorant.','Hotel with bar and restaurant.'],s:'Tripadvisor'},
+{id:'h2',c:'hotels',n:'Pilo Lala Hotel',a:'Çermë, Lushnjë',d:['Hotel i vogël me restorant dhe mëngjes.','Small hotel with restaurant and breakfast.'],s:'Tripadvisor'},
+{id:'h3',c:'hotels',n:'Zdrava Resort',a:'SH4, Lushnjë',d:['Resort në rrugën SH4.','Resort on the SH4 road.'],s:'Tripadvisor',chk:1},
+{id:'h4',c:'hotels',n:'Ardenica Boutique Hotel',a:'Lushnjë',d:['Hotel i listuar në zonën e Lushnjës.','Hotel listed in the Lushnjë area.'],s:'Tripadvisor',chk:1},
+{id:'h5',c:'hotels',n:'Frogs House Hotel & Restaurant',a:'Lushnjë',d:['Hotel me restorant dhe mëngjes.','Hotel with restaurant and breakfast.'],s:'Tripadvisor',chk:1},
+{id:'h6',c:'hotels',n:'Divjaka Resort',a:'National Park, Divjakë',d:['Resort 3 yje në Divjakë, me restorant, pishinë dhe bar, afër plazhit.','3-star resort in Divjakë with restaurant, pool and bar, near the beach.'],ph:'+355 676 000 505',s:'listim i palës së tretë',chk:1},
+{id:'h7',c:'hotels',n:'Hotel Pelikan',a:'Divjakë Qender Plazh 1',d:['Hotel me 11 dhoma në Divjakë, rreth 5 km nga laguna.','Hotel with 11 rooms in Divjakë, about 5 km from the lagoon.'],s:'hotels-albania.net',chk:1},
+{id:'h8',c:'hotels',n:'Guesthouse Fatos Biti',a:'2 Divjakë',d:['Konak në Divjakë me tarracë dhe Wi-Fi.','Guesthouse in Divjakë with terrace and Wi-Fi.'],s:'Booking.com',chk:1},
+{id:'h9',c:'hotels',n:'Guesthouse Anila',a:'2 Divjakë',d:['Konak në Divjakë me kopsht dhe sallon.','Guesthouse in Divjakë with garden and lounge.'],s:'Booking.com',chk:1},
+{id:'m1',c:'supermarkets',n:'Spar Lushnjë',a:'Shetitorja e Palmave (një burim tjetër jep Shetitorja e Stadiumit)',d:['Supermarketi Spar i qytetit.','The Spar supermarket in town.'],s:'lushnja.biz, fastlygo.al',chk:1},
+{id:'m2',c:'supermarkets',n:'Conad Lushnjë',a:'Shetitorja Kongresi i Lushnjës',d:['Supermarket Conad në qendër të qytetit.','Conad supermarket in the town centre.'],s:'near-place.com',chk:1,lat:40.94157,lng:19.70626},
+{id:'m3',c:'supermarkets',n:'Ipermarket 1 (Metropol Center)',a:'Metropol Center, Shetitorja Kongresi i Lushnjës',d:['Supermarket në qendrën Metropol; rrjeti ka disa pika në Lushnjë.','Supermarket in the Metropol Center; the chain has several branches in Lushnjë.'],ph:'+355 69 575 5555',s:'ipermarket.al',chk:1},
+{id:'d1',c:'shops',n:'Pazari i Lushnjës',a:'Lushnjë',d:['Treg me produkte të freskëta dhe djathëra të rajonit.','Market with fresh produce and regional cheeses.'],s:'traveldojo.com',f:1},
+{id:'a1',c:'attractions',n:'Muzeu i Kongresit të Lushnjës',a:'Qendra e Lushnjës',d:['Ndërtesa ku u mbajt Kongresi i Lushnjës në janar 1920, sot muze me fotografi e dokumente.','The building where the Congress of Lushnjë was held in January 1920, now a museum with photographs and documents.'],s:'Wikipedia',f:1,lat:40.94111,lng:19.7075,h:['E hënë–e shtunë 8:15–15:45. E diel: mbyllur.','Mon–Sat 8:15–15:45. Sunday: closed.'],hs:'Ministria e Kulturës (mtks.gov.al)'},
+{id:'a2',c:'attractions',n:'Muzeu Historik Lushnje',a:'Shetitorja Kongresi i Lushnjës',d:['Rreth 200 objekte historike e kulturore, përfshirë zbulime arkeologjike.','About 200 historical and cultural objects, including archaeological finds.'],s:'pine.al',f:1,h:['E hënë–e shtunë 8:00–16:00. E diel: mbyllur.','Mon–Sat 8:00–16:00. Sunday: closed.'],hs:'Ministria e Kulturës (mtks.gov.al)'},
+{id:'a3',c:'attractions',n:'Monumenti i Kongresit',a:'Qendra e Lushnjës',d:['Monument kushtuar Kongresit të vitit 1920.','Monument commemorating the 1920 Congress.'],s:'allinmap.app',chk:1},
+{id:'a4',c:'attractions',n:'Shetitorja Kongresi i Lushnjës',a:'Sheshi i Bashkisë, Lushnjë',d:['Shetitore në qendër të qytetit.','Pedestrian promenade in the town centre.'],s:'Regjistri Tregtar, ipermarket.al, near-place.com'},
+{id:'a5',c:'attractions',n:'Monumenti “Toka Jonë”',a:'Lushnjë',d:['Monument i listuar ndër pikat e njohura të qytetit.','Monument listed among the town’s landmarks.'],s:'Wikipedia'},
+{id:'a6',c:'attractions',n:'Parku i Qytetit',a:'Lushnjë',d:['Park me shtigje me hije për shëtitje.','Park with shaded walking paths.'],s:'traveldojo.com'},
+{id:'a7',c:'attractions',n:'Manastiri i Ardenicës',a:'Ardenicë, rreth 18 km nga Lushnja',d:['Manastir i njohur; sipas burimeve zyrtare aty u martua Skënderbeu me Andronika Arianitin në vitin 1451.','A well-known monastery; official sources say Skanderbeg married Andronika Arianiti here in 1451.'],s:'akt.gov.al',f:1},
+{id:'a8',c:'attractions',n:'Parku Kombëtar Divjakë–Karavasta',a:'Divjakë',d:['Park bregdetar me lagunë, pyll pishash dhe mbi 220 lloje zogjsh, përfshirë pelikanin kaçurrel.','Coastal park with lagoon, pine forest and over 220 bird species, including the Dalmatian pelican.'],s:'akt.gov.al',f:1},
+{id:'a9',c:'attractions',n:'Laguna e Karavastasë',a:'Divjakë',d:['Laguna më e madhe në Shqipëri.','The largest lagoon in Albania.'],s:'parksdinarides.org',f:1},
+{id:'a10',c:'attractions',n:'Pylli i pishave të Divjakës',a:'Divjakë',d:['I vetmi pyll bregdetar natyror me pisha në Shqipëri.','The only natural coastal pine forest in Albania.'],s:'akt.gov.al'},
+{id:'a11',c:'attractions',n:'Pylli i Senesës',a:'Rrethi i Lushnjës',d:['Listuar si atraksion; përshkrim i verifikuar nuk ka ende.','Listed as an attraction; no verified description yet.'],s:'trip.com',chk:1},
+{id:'i1',c:'institutions',n:'Bashkia Lushnjë',a:'Sheshi i Bashkisë, Lushnjë',d:['Bashkia e Lushnjës.','Lushnjë Municipality.'],s:'Regjistri Tregtar'},
+{id:'i2',c:'institutions',n:'Spitali “Ihsan Çabej” Lushnjë',a:'Lagjja Xhevdet Nepravishta, Rruga Stadiumit',d:['Spitali i qytetit.','The town hospital.'],ph:'+355 35 22131',s:'Prokurime publike',chk:1},
+{id:'i3',c:'institutions',n:'Ujësjellës Kanalizime Lushnjë',a:'Lagjja 18 Tetori, Rruga Vath Korreshi',d:['Ndërmarrja e ujësjellësit dhe kanalizimeve.','The water supply and sewerage utility.'],ph:'+355 69 60 46 407',s:'Prokurime publike',chk:1}];
+function all(){return P}
+function item(id){return P.filter(function(x){return x.id==id})[0]}
+function mapUrl(q){return 'https://www.google.com/maps?q='+encodeURIComponent(q)+'&output=embed&hl='+lang}
+function gmaps(p){return 'https://www.google.com/maps/search/?api=1&query='+(p.lat?p.lat+','+p.lng:encodeURIComponent(p.n+' '+p.a.replace(/\(.*\)/,'')+' Lushnjë Albania'))}
+function card(p){return '<article class="card" tabindex="0" role="button" onclick="openP(\''+p.id+'\')" onkeydown="if(event.key==\'Enter\')openP(\''+p.id+'\')"><div class="cov" style="background-color:'+CL[p.c]+(p.img?';background-image:url('+esc(p.img)+')':'')+'" aria-hidden="true">'+(p.img?'':ce(p.c))+'</div><div class="cb"><span class="tag">'+cn(p.c)+'</span>'+(p.chk?'<span class="chk">'+T('Për verifikim','To verify')+'</span>':'')+'<h3>'+esc(p.n)+'</h3><p>'+esc(p.d[lang=='sq'?0:1])+'</p><p>📍 '+esc(p.a)+'</p>'+(p.h?'<p>🕒 '+esc(p.h[lang=='sq'?0:1])+'</p>':'')+'</div></article>'}
+function emptyMsg(){if(S.cat!='all'&&!S.q){var c=CATS.filter(function(x){return x[0]==S.cat})[0];return '<div class="empty"><p>'+T('Ende pa vende të verifikuara në këtë kategori. Mos u mbështetni në listime të pasigurta.','No verified places in this category yet. We avoid unreliable listings.')+'</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(c[4])+'">'+T('Kërko në Google Maps','Search on Google Maps')+'</a></div>'}return '<p class="empty">'+T('Asnjë rezultat. Provo një fjalë tjetër.','No results. Try another word.')+'</p>'}
+function filt(){var q=S.q.toLowerCase();return P.filter(function(p){return (S.cat=='all'||p.c==S.cat)&&(!q||(p.n+p.a+p.d.join(' ')+cn(p.c)).toLowerCase().indexOf(q)>-1)})}
+function openP(id){var p=item(id);$('#ov').innerHTML='<div class="sheet" onclick="if(event.target==this)closeP()"><div role="dialog" aria-modal="true" aria-label="'+esc(p.n)+'"><div class="cov" style="background-color:'+CL[p.c]+(p.img?';background-image:url('+esc(p.img)+')':'')+'">'+(p.img?'':ce(p.c))+'</div><div class="in"><span class="tag">'+cn(p.c)+'</span>'+(p.chk?'<span class="chk">'+T('Për verifikim','To verify')+'</span>':'')+'<h2 style="margin-bottom:8px">'+esc(p.n)+'</h2><p>'+esc(p.d[lang=='sq'?0:1])+'</p><p class="kv"><span>'+T('Adresa','Address')+':</span> '+esc(p.a)+'</p><p class="kv"><span>'+T('Orari','Opening hours')+':</span> '+(p.h?esc(p.h[lang=='sq'?0:1])+' <span class="note" style="margin:0">('+esc(p.hs)+'; '+T('telefononi për ndryshime','call to confirm changes')+')</span>':T('Nuk ka informacion','Not available'))+'</p><p class="kv"><span>'+T('Telefoni','Phone')+':</span> '+(p.ph?'<a href="tel:'+esc(p.ph.replace(/\s/g,''))+'">'+esc(p.ph)+'</a>':T('Nuk ka informacion','Not available'))+'</p><p class="kv"><span>'+T('Burimi','Source')+':</span> '+esc(p.s)+'</p>'+
+'<a class="btn" target="_blank" rel="noopener" href="'+gmaps(p)+'">'+T('Hap në Google Maps','Open in Google Maps')+'</a><button class="btn alt" onclick="showOnMap(\''+p.id+'\')">'+T('Shiko në hartë','Show on map')+'</button><button class="btn alt" onclick="shareP(\''+p.id+'\')">'+T('Ndaj','Share')+'</button><button class="btn alt" onclick="closeP()">'+T('Mbyll','Close')+'</button></div></div></div>'}
+function closeP(){$('#ov').innerHTML=''}
+function shareP(id){var p=item(id);try{if(navigator.share){navigator.share({title:p.n,text:p.d[0],url:location.href.split('#')[0]});return}}catch(e){}}
+function showOnMap(id){var p=item(id);S.mapq=p.n+' '+p.a.replace(/\(.*\)/,'')+' Lushnjë Albania';closeP();render();var m=$('#map');if(m)m.scrollIntoView()}
+function setCat(k){S.cat=k;S.q='';if(k!='all'){var c=CATS.filter(function(x){return x[0]==k})[0];S.mapq=c[4]}render();var l=$('#list');if(l)l.scrollIntoView()}
+function setLang(){lang=lang=='sq'?'en':'sq';try{localStorage.setItem('lg',lang)}catch(e){}document.documentElement.lang=lang;render()}
+function setQ(v){S.q=v;var r=$('#res');if(r){var l=filt();r.innerHTML=l.length?l.map(card).join(''):emptyMsg()}}
+function mapBlock(){return '<div class="mapwrap" id="map"><div class="chips">'+CATS.map(function(c){return '<button class="chip" onclick="S.mapq=\''+c[4]+'\';render()">'+c[1]+' '+T(c[2],c[3])+'</button>'}).join('')+'</div>'+(EMBED?'<iframe title="'+T('Harta e Lushnjës','Map of Lushnjë')+'" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+mapUrl(S.mapq)+'"></iframe>':'<div class="mapfb"><p>'+T('Harta interaktive e Google shfaqet kur faqja hostohet në link-un tënd publik. Këtu mund ta hapësh direkt:','The interactive Google map appears once the site is hosted at your public link. Here you can open it directly:')+'</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(S.mapq)+'">'+T('Hap hartën','Open the map')+'</a></div>')+'</div>'}
+function render(){var l=filt();
+$('#lg').textContent=lang=='sq'?'SQ · EN':'EN · SQ';
+$('#main').innerHTML='<section class="hero"><h1>'+T('Zbulo Lushnjën','Discover Lushnja')+'</h1><p>'+T('Biznese, shërbime, institucione dhe atraksione turistike të qytetit, në një vend.','Businesses, services, institutions and tourist attractions of the city, in one place.')+'</p><div class="search"><input type="search" aria-label="'+T('Kërko','Search')+'" placeholder="'+T('Kërko restorante, farmaci, vende…','Search restaurants, pharmacies, places…')+'" value="'+esc(S.q)+'" oninput="if(S.cat!=\'all\'&&this.value){S.cat=\'all\'}setQ(this.value)"></div></section>'+
+'<h2>'+T('Kategoritë','Categories')+'</h2><div class="cats">'+CATS.map(function(c){return '<button class="cat '+(S.cat==c[0]?'on':'')+'" onclick="setCat(\''+c[0]+'\')"><i aria-hidden="true">'+c[1]+'</i>'+T(c[2],c[3])+'</button>'}).join('')+'</div>'+
+(S.cat=='all'&&!S.q?'<h2>'+T('Vende të veçanta','Featured Places')+'</h2><div class="grid">'+P.filter(function(p){return p.f}).map(card).join('')+'</div>':'')+
+'<h2 id="list">'+(S.cat=='all'?T('Të gjitha vendet','All Places'):cn(S.cat))+' <button class="chip" '+(S.cat=='all'?'style="display:none"':'')+' onclick="setCat(\'all\')">'+T('Hiq filtrin','Clear')+'</button></h2><div class="grid" id="res">'+(l.length?l.map(card).join(''):emptyMsg())+'</div>'+
+'<h2>'+T('Harta e Lushnjës','Map of Lushnja')+'</h2>'+mapBlock()+'<p class="note">'+T('Informacioni vjen nga burimet e shënuara në çdo kartë. “Për verifikim” do të thotë burim më pak i sigurt. Orari dhe çmimet shfaqen vetëm kur verifikohen.','Information comes from the sources noted on each card. “To verify” means a less reliable source. Hours and prices show only once verified.')+'</p>';
+$('#foot').innerHTML='Lushnja Guide · '+T('Udhëzues i pavarur i qytetit. Nëse shihni një gabim ose dëshironi të shtoni biznesin tuaj, kontaktoni redaktorin e faqes.','An independent city guide. If you see a mistake or want to add your business, contact the site editor.')}
+document.documentElement.lang=lang;render();
+</script>
+</body>
+</html>
